@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 
-<html data-ng-app="portfolio">
+<html ng-app="portfolio">
     <head>
         <title></title>
     </head>
     <body style="{{bodyImage}}">
+
         <div ui-view="main"></div>
         <div ui-view="about"></div>
-        <div ui-view="whyme"></div>        
+        <div ui-view="whyme"></div>    
+        
+        <!--lib-->
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/angular.min.js"></script>
+        <script src="lib/angular-route.min.js"></script>
+        <script src="lib/angular-ui-router.min.js"></script>
+        <script src="lib/angular-animate.min.js"></script>
+        
+        <!--app-->
+        <script src="js/routes/routes.js"></script>
+        
+        <script src="app.js"></script>
+        
+            
     </body>
 </html>

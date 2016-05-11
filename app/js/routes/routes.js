@@ -1,21 +1,21 @@
-var routes = function($stateProvider, $urlRouterProvider, $httpProvider){
+var routes = function($stateProvider, $urlRouterProvider, $httpProvider,$locationProvider){
     
     
-    $locationProvider.html5Mode({
-       enabled: true,
-       requireBase: false
-    });
+    //$locationProvider.html5Mode({
+    //   enabled: true,
+    //   requireBase: false
+    //});
     
-    $urlRouterProvider.otherwise('/');
+     $urlRouterProvider.otherwise('/');
     
     $stateProvider
         .state('main',{
-            url:'/',
+            url:'/main',
             views:{
                 'main':{
                     templateUrl:'views/main/main.html',
-                    controller:'MainController',
-                    ControllerAs:'main'
+                    //controller:'MainController',
+                    //ControllerAs:'main'
                 }
             }
         })
@@ -24,8 +24,8 @@ var routes = function($stateProvider, $urlRouterProvider, $httpProvider){
             views:{
                 'about':{
                     templateUrl:'views/about/about.html',
-                    controller:'AboutController',
-                    ControllerAs:'about'
+                    //controller:'AboutController',
+                    //ControllerAs:'about'
                 }
             }
         })
@@ -33,10 +33,10 @@ var routes = function($stateProvider, $urlRouterProvider, $httpProvider){
             url:'/whyme',
             views:{
                 templateUrl:'views/whyme/whyme.html',
-                controller:'WhyMeController',
-                ControllerAs:'whyme'
+                //controller:'WhyMeController',
+                //ControllerAs:'whyme'
             }
         });
 }
 
-routes.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider'];
+routes.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider','$locationProvider'];

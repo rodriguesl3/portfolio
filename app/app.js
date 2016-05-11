@@ -1,5 +1,4 @@
-var portfolio = anngular.module('portfolio',
-                        ['ui.router','ngAnimate','ngRoute']);
+var portfolio = angular.module('portfolio',['ui.router','ngAnimate','ngRoute']);
                         
 /*Routes*/
-bring2me.config(routes);
+portfolio.config(routes);
