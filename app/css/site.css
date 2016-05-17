@@ -1,0 +1,35 @@
+﻿body {
+}
+
+.line-bottom {
+    bottom: 25%;
+    position: absolute;
+}
+
+.link-button {
+    border: white 2px solid;
+    padding-bottom: 4%;
+    padding-top: 4%;
+    padding-left: 10%;
+    padding-right: 10%;
+    color: white;
+}
+
+.dvButton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.img {
+    background: url(images/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@media only screen and (min-width: 601px) {
+}

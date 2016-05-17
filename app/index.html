@@ -1,27 +1,52 @@
 <!DOCTYPE html>
 
 <html ng-app="portfolio">
-    <head>
-        <title></title>
-    </head>
-    <body style="{{bodyImage}}">
+<head>
+    <title></title>
+    <!-- CSS Lib -->
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/materialize.min.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <style>
+        
 
-        <div ui-view="main"></div>
-        <div ui-view="about"></div>
-        <div ui-view="whyme"></div>    
-        
-        <!--lib-->
-        <script src="lib/jquery.min.js"></script>
-        <script src="lib/angular.min.js"></script>
-        <script src="lib/angular-route.min.js"></script>
-        <script src="lib/angular-ui-router.min.js"></script>
-        <script src="lib/angular-animate.min.js"></script>
-        
-        <!--app-->
-        <script src="js/routes/routes.js"></script>
-        
-        <script src="app.js"></script>
-        
-            
-    </body>
+        .ng-enter {
+            animation: fadeIn 1.5s;
+        }
+
+        .ng-leave {
+            animation: fadeOut 1.5s;
+        }
+    </style>
+
+</head>
+<body style="{{bodyImage}}">
+
+    <div ui-view="main" ng-animate=""></div>
+    <div ui-view="about" ng-animate=""></div>
+    <div ui-view="whyme" ng-animate=""></div>
+
+    <!--lib-->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/angular-animate.min.js"></script>
+    <script src="lib/angular-route.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <script src="lib/materialize.min.js"></script>
+
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+
+
+    <!--Route-->
+    <script src="js/routes/routes.js"></script>
+
+
+    <script src="app.js"></script>
+
+
+</body>
 </html>

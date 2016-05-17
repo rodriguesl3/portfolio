@@ -6,7 +6,7 @@ var routes = function($stateProvider, $urlRouterProvider, $httpProvider,$locatio
     //   requireBase: false
     //});
     
-     $urlRouterProvider.otherwise('/');
+     $urlRouterProvider.otherwise('/main');
     
     $stateProvider
         .state('main',{
@@ -14,8 +14,8 @@ var routes = function($stateProvider, $urlRouterProvider, $httpProvider,$locatio
             views:{
                 'main':{
                     templateUrl:'views/main/main.html',
-                    //controller:'MainController',
-                    //ControllerAs:'main'
+                    controller:'MainController',
+                    ControllerAs:'main'
                 }
             }
         })
