@@ -31,10 +31,12 @@ var routes = function($stateProvider, $urlRouterProvider, $httpProvider,$locatio
         })
         .state('whyme',{
             url:'/whyme',
-            views:{
-                templateUrl:'views/whyme/whyme.html',
-                //controller:'WhyMeController',
-                //ControllerAs:'whyme'
+            views: {
+                'whyme':{
+                    templateUrl: 'views/whyme/whyme.html',
+                    //controller:'WhyMeController',
+                    //ControllerAs:'whyme'
+                }
             }
         });
 }

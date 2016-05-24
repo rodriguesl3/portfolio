@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 
 <html ng-app="portfolio">
 <head>
@@ -8,43 +8,57 @@
     <link href="css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/materialize.min.css" rel="stylesheet" />
     <link href="css/site.css" rel="stylesheet" />
-    <style>
-        
+    <link href="css/slick.css" rel="stylesheet" />
+    <link href="css/slick-theme.css" rel="stylesheet" />
 
+
+
+    <style>
         .ng-enter {
             animation: fadeIn 1.5s;
+            z-index:555;
         }
 
         .ng-leave {
             animation: fadeOut 1.5s;
+            z-index:999
         }
     </style>
 
 </head>
 <body style="{{bodyImage}}">
-
+    <!--<div class="bg-filter-black"></div>-->
     <div ui-view="main" ng-animate=""></div>
     <div ui-view="about" ng-animate=""></div>
     <div ui-view="whyme" ng-animate=""></div>
 
     <!--lib-->
-    <script src="lib/angular.min.js"></script>
     <script src="lib/jquery.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+
+    <script src="lib/slick.js"></script>
+    <script src="lib/angular-slick.min.js"></script>
+
     <script src="lib/angular-animate.min.js"></script>
     <script src="lib/angular-route.min.js"></script>
     <script src="lib/angular-ui-router.min.js"></script>
 
-    <script src="lib/materialize.min.js"></script>
 
+    <script src="lib/materialize.min.js"></script>
+ 
 
     <!-- Controllers -->
     <script src="js/controllers/MainController.js"></script>
+    <script src="js/controllers/whymecontroller.js"></script>
 
 
     <!--Route-->
     <script src="js/routes/routes.js"></script>
 
+    <!-- Config -->
+    <script src="js/config/globalconfig.js"></script>
 
+    <!-- App -->
     <script src="app.js"></script>
 
 
