@@ -1,5 +1,17 @@
 <div ng-controller="WhymeController as why">
     <div class="container">
+
+        <div class="row" style="background-color:blue;">
+            <div class="chart">
+                <c3chart bindto-id="chart1">
+                    <chart-column column-id="data-1"
+                                  column-values="30,200,100,400,150,250"
+                                  column-type="line" />
+                </c3chart>
+            </div>
+        </div>
+
+
         <div class="row up-border-tab">
             <div class="col s12 m6">
                 <div class="col s6 m4 l3 bg-tab">
