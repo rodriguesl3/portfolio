@@ -3,6 +3,7 @@ var portfolio = angular.module('portfolio', ['ui.router', 'ngAnimate', 'ngRoute'
 /*Controller*/
 portfolio.controller('MainController', MainController);
 portfolio.controller('WhymeController', WhymeController);
+portfolio.controller('blogController', blogController);
 
 
 /*Routes*/

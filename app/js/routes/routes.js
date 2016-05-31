@@ -1,38 +1,47 @@
-var routes = function($stateProvider, $urlRouterProvider, $httpProvider,$locationProvider){
-    
-    
+var routes = function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
+
+
     //$locationProvider.html5Mode({
     //   enabled: true,
     //   requireBase: false
     //});
-    
-     $urlRouterProvider.otherwise('/main');
-    
+
+    $urlRouterProvider.otherwise('/main');
+
     $stateProvider
-        .state('main',{
-            url:'/main',
-            views:{
-                'main':{
-                    templateUrl:'views/main/main.html',
-                    controller:'MainController',
-                    ControllerAs:'main'
+        .state('main', {
+            url: '/main',
+            views: {
+                'main': {
+                    templateUrl: 'views/main/main.html',
+                    controller: 'MainController',
+                    ControllerAs: 'main'
                 }
             }
         })
-        .state('aboutme',{
-            url:'/about',
-            views:{
-                'about':{
-                    templateUrl:'views/about/about.html',
+        .state('aboutme', {
+            url: '/about',
+            views: {
+                'about': {
+                    templateUrl: 'views/about/about.html',
                     //controller:'AboutController',
                     //ControllerAs:'about'
                 }
             }
         })
-        .state('whyme',{
-            url:'/whyme',
+        .state('blog', {
+            url: '/blog',
             views: {
-                'whyme':{
+                'blog': {
+                    templateUrl: 'views/blog/blog.html',
+                    controller: 'blogController'
+                }
+            }
+        })
+        .state('whyme', {
+            url: '/whyme',
+            views: {
+                'whyme': {
                     templateUrl: 'views/whyme/whyme.html',
                     //controller:'WhyMeController',
                     //ControllerAs:'whyme'
@@ -41,4 +50,4 @@ var routes = function($stateProvider, $urlRouterProvider, $httpProvider,$locatio
         });
 }
 
-routes.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider','$locationProvider'];
+routes.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider', '$locationProvider'];
