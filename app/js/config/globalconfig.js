@@ -3,4 +3,4 @@
     slickCarouselConfig.autoplay = false;
 }
 
-globalConfig.$inject = ['slickCarouselConfig'];
+globalConfig.$inject = ['slickCarouselConfig']; 
