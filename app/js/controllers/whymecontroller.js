@@ -1,6 +1,8 @@
 ﻿var WhymeController = function ($scope) {
+    //asdfasfasf
 
 
+    
 
 }
 
