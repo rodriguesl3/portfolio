@@ -8,6 +8,7 @@ portfolio.controller('blogController', blogController);
 /*Directives*/
 portfolio.directive('blur', blur);
 
+
 /*Routes*/
 portfolio.config(routes);
 portfolio.config(globalConfig);
