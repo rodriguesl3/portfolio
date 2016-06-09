@@ -2,11 +2,9 @@
     <div class="container" style="background:url('img/bkgImage.png');background-size:cover; background-repeat:repeat;">
         <div class="row">
             <div class="chart">
-                <c3chart bindto-id="chart1">
-                    <chart-column column-id="data-1"
-                                  column-values="not bad, good, awesome, killer"
-                                  column-type="line" />
-                </c3chart>
+                <canvas id="line" class="chart chart-line" chart-data="data"
+                        chart-labels="labels" chart-legend="true" chart-series="series"
+                        chart-options="options" chart-click="onClick"></canvas> 
             </div>  
         </div>
         <div class="row up-border-tab">
