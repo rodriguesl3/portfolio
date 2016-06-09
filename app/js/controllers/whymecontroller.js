@@ -1,5 +1,5 @@
 ﻿var WhymeController = function ($scope) {
-    //asdfasfasf
+    /*asdfasfasf*/
 
 
     
