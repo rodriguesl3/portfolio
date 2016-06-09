@@ -6,7 +6,7 @@ portfolio.controller('WhymeController', WhymeController);
 portfolio.controller('blogController', blogController);
 
 /*Directives*/
-portfolio.directive('blur', blur);
+//portfolio.directive('blur', blur);
 
 
 /*Routes*/
