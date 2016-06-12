@@ -1,5 +1,5 @@
 ﻿body {
-    color: white;
+    color: black;
 }
 
 .bg-filter-black {
@@ -127,3 +127,11 @@ img {
     position: static;
 }
 
+.parallax-image {
+    background-attachment: fixed;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    height: 450px;
+    position: relative;
+    background-size: cover;
+}
