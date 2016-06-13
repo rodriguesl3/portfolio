@@ -135,3 +135,7 @@ img {
     position: relative;
     background-size: cover;
 }
+
+.card-image {
+    min-height: 115px;
+}
