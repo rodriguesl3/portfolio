@@ -1,1 +1,1 @@
-﻿var about = function()
+﻿//var about = function()

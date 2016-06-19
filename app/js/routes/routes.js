@@ -48,6 +48,6 @@ var routes = function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
                 }
             }
         });
-}
+};
 
 routes.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider', '$locationProvider'];

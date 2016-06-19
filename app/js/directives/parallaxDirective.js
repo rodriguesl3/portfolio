@@ -6,6 +6,6 @@
                 $(element).parallax();
             });
         }
-    }
-}
+    };
+};
 parallax.$inject = ['$timeout'];
