@@ -23,9 +23,7 @@ var routes = function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             url: '/about',
             views: {
                 'about': {
-                    templateUrl: 'views/about/about.html',
-                    //controller:'AboutController',
-                    //ControllerAs:'about'
+                    templateUrl: 'views/about/about.html'
                 }
             }
         })
@@ -42,9 +40,7 @@ var routes = function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             url: '/whyme',
             views: {
                 'whyme': {
-                    templateUrl: 'views/whyme/whyme.html',
-                    //controller:'WhyMeController',
-                    //ControllerAs:'whyme'
+                    templateUrl: 'views/whyme/whyme.html'
                 }
             }
         });

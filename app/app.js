@@ -4,6 +4,7 @@ var portfolio = angular.module('portfolio', ['ui.router', 'ngAnimate', 'ngRoute'
 portfolio.controller('MainController', MainController);
 portfolio.controller('WhymeController', WhymeController);
 portfolio.controller('blogController', blogController);
+portfolio.controller('aboutController', aboutController);
 
 /*Directives*/
 //portfolio.directive('blur', blur);

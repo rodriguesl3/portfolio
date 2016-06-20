@@ -5,7 +5,6 @@ module.exports = function (grunt) {
             temp: [
                 'app/dist/js',
                 'app/dist/css',
-                'app/dist/view',
             ],
             all: ['app/dist']
         },
@@ -17,7 +16,7 @@ module.exports = function (grunt) {
         concat: {
             scripts: {
                 src: ['app/js/**/*.js', 'app/*.js'],
-                dest: 'app/dist/js/scripts.min.js'
+                dest: 'app/dist/js/scripts.js'
             },
             libs: {
                 src: [
@@ -81,10 +80,40 @@ module.exports = function (grunt) {
                 expand: true,
                 cwd: 'app/views/',
                 src: ['**/*.html'],
-                dest: 'app/dist/view',
+                dest: 'app/dist/views',
+            },
+            index: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                src: ['app/index.html'],
+                dest: 'app/dist/index.html'
             }
         },
-
+        copy: {
+            images: {
+                expand: true,
+                filter: 'isFile',
+                cwd:'app/img/',
+                src: '**',
+                dest: 'app/dist/img/'
+            },
+            fonts: {
+                expand: true,
+                filter: 'isFile',
+                cwd: 'app/fonts/',
+                src: '**',
+                dest: 'app/dist/fonts/'
+            },
+            font: {
+                expand: true,
+                filter: 'isFile',
+                cwd: 'app/font/',
+                src: '**',
+                dest: 'app/dist/font/'
+            }
+        }
 
     });
 
@@ -94,7 +123,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
-
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     grunt.registerTask('prod',
         [
@@ -107,7 +136,11 @@ module.exports = function (grunt) {
         'cssmin:libs',
         'cssmin:local',
         'cssmin:all',
-        'htmlmin',
+        'htmlmin:views',
+        'htmlmin:index',
+        'copy:images',
+        'copy:fonts',
+        'copy:font',
         'clean:temp'
         ]);
 };
