@@ -2,14 +2,83 @@
 
 <html ng-app="portfolio">
 <head>
-    <link href="vendor.min.css" rel="stylesheet" />
+
+    <!-- CSS Lib -->
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/materialize.min.css" rel="stylesheet" />
+    <link href="css/slick.css" rel="stylesheet" />
+    <link href="css/slick-theme.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+
+    <style>
+        .ng-enter {
+            position: absolute;
+            width: 100%;
+            animation: fadeIn 1.5s;
+            z-index: 555;
+        }
+
+        .ng-leave {
+            position: absolute;
+            width: 100%;
+            animation: fadeOut 1.5s;
+            z-index: 999;
+        }
+    </style>
+
+
+    <!--<link href="vendor.min.css" rel="stylesheet" />-->
+
+
 </head>
 <body style="{{bodyImage}}">
     <div ui-view="main" ng-animate=""></div>
     <div ui-view="about" ng-animate=""></div>
     <div ui-view="whyme" ng-animate=""></div>
-    <div ui-view="blog" ng-animate=""></div>
 
-    <script src="vendor.min.js"></script>
+
+    <!--lib-->
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+
+    <script src="lib/slick.js"></script>
+    <script src="lib/angular-slick.min.js"></script>
+
+    <script src="lib/angular-animate.min.js"></script>
+    <script src="lib/angular-route.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+    <script src="lib/d3.min.js"></script>
+    <script src="lib/c3.min.js"></script>
+    <script src="lib/c3-angular.min.js"></script>
+    <script src="lib/Chart.js"></script>
+    <script src="lib/angular-chart.min.js"></script>
+    <script src="lib/angular-parallax.js"></script>
+    <script src="lib/materialize.min.js"></script>
+
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+    <script src="js/controllers/whymecontroller.js"></script>
+    <script src="js/controllers/AboutController.js"></script>
+    <!--<script src="js/controllers/blogcontroller.js"></script>-->
+
+    <!--Route-->
+    <script src="js/routes/routes.js"></script>
+
+    <!-- Config -->
+    <script src="js/config/globalconfig.js"></script>
+
+    <!-- App -->
+    <script src="app.js"></script>
+
+
+
+
+
+
+
+    <!--<script src="vendor.min.js"></script>-->
+
 </body>
 </html>

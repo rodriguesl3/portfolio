@@ -1,7 +1,3 @@
-
-
-
-
 <div ng-controller="WhymeController as why">
     <div parallax-background parallax-ratio="0.5"
          class="parallax-image"
@@ -10,7 +6,7 @@
             <h1 style="margin-top: 0;">Why me</h1>
             <h2>Understanding the necessisty</h2>
         </div>
-        
+
     </div>
     <div class="row" style="background-color:white">
         <div class="col s12 m6 l6">
@@ -40,12 +36,20 @@
                         <div class="row">
                             <div class="col s12">
                                 <div class="card">
-                                    <div class="card-image">
-                                        <img class="blur" style="{{::experience.imgStyle}}" src="{{::experience.img}}" alt="" />
-                                        <span class="card-title">{{::experience.title}}</span>
+                                    <div class="card-image" style="background-color:blue;">
+                                        <img src="{{::experience.flag}}" alt="" style="max-height:200px;" />
+                                        <!--<img class="blur" style="{{::experience.imgStyle}}" src="{{::experience.img}}" alt="" />
+                                        <span class="card-title">{{::experience.title}}</span>-->
                                     </div>
+                                    <!--<div style="position: absolute;
+    width: 100%;
+    height: 120px;
+    top: 30%;">
+                                        <img style="{{::experience.imgStyle}} width: 60%;height: 37vh; margin-left:20%; max-height: 125px;" src="{{::experience.img}}" alt="" />
+                                    </div>-->
                                     <div class="card-content">
-                                        <p style="color:black">
+                                        <h3>{{::experience.title}}</h3>
+                                        <p style="color:black; padding-top:50px">
                                             {{::experience.Description}}
                                         </p>
                                     </div>

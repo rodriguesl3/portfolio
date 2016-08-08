@@ -27,15 +27,6 @@ var routes = function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
                 }
             }
         })
-        .state('blog', {
-            url: '/blog',
-            views: {
-                'blog': {
-                    templateUrl: 'views/blog/blog.html',
-                    controller: 'blogController'
-                }
-            }
-        })
         .state('whyme', {
             url: '/whyme',
             views: {

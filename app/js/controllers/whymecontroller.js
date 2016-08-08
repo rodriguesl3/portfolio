@@ -1,11 +1,20 @@
 ﻿var WhymeController = function ($rootScope) {
-
     angular.extend(this, {
         experiences: [
+            {
+                "Id": "0",
+                //"img": "http://likefotos.com/wp-content/uploads/2015/01/paisagem-tailandia1.jpg",
+                "img": "./img/zurich.png",
+                "flag": "./img/ireland.jpg",
+                "imgStyle": "background-color:black;",
+                "title": "Zurich",
+                "Description": "Lorem ipsum dolor sit amet, eum labores consequat eu,ex vis vide copiosae electram.Ut est congue ignota instructior, ex assum hendrerit usu. Ad pri case causae officiis, quas habeo ludus eum et. Facer virtute senserit ne sea, ex posse melius equidem eum."
+            },
             {
                 "Id": "1",
                 //"img": "http://likefotos.com/wp-content/uploads/2015/01/paisagem-tailandia1.jpg",
                 "img": "./img/ability.png",
+                "flag": "./img/ireland.jpg",
                 "imgStyle": "background-color:black;",
                 "title": "Ability",
                 "Description": "Lorem ipsum dolor sit amet, eum labores consequat eu,ex vis vide copiosae electram.Ut est congue ignota instructior, ex assum hendrerit usu. Ad pri case causae officiis, quas habeo ludus eum et. Facer virtute senserit ne sea, ex posse melius equidem eum."
@@ -13,21 +22,15 @@
                 "Id": "2",
                 //"img": "http://likefotos.com/wp-content/uploads/2015/01/paisagem-tailandia1.jpg",
                 "img": "./img/freelancing.jpg",
+                "flag": "./img/ireland.jpg",
                 "title": "Freelancer",
                 "Description": "Lorem ipsum dolor sit amet, eum labores consequat eu,ex vis vide copiosae electram.Ut est congue ignota instructior, ex assum hendrerit usu. Ad pri case causae officiis, quas habeo ludus eum et. Facer virtute senserit ne sea, ex posse melius equidem eum."
             },
-         {
-             "Id": "3",
-             //"img": "http://likefotos.com/wp-content/uploads/2015/01/paisagem-tailandia1.jpg",
-             "img": "./img/g2db.png",
-             "imgStyle": "background-color:black;",
-             "title": "G2DB",
-             "Description": "Lorem ipsum dolor sit amet, eum labores consequat eu,ex vis vide copiosae electram.Ut est congue ignota instructior, ex assum hendrerit usu. Ad pri case causae officiis, quas habeo ludus eum et. Facer virtute senserit ne sea, ex posse melius equidem eum."
-         },
           {
               "Id": "4",
               //"img": "http://likefotos.com/wp-content/uploads/2015/01/paisagem-tailandia1.jpg",
               "img": "./img/mac.png",
+              "flag": "./img/brazil.jpg",
               "title": "MAC",
               "Description": "Lorem ipsum dolor sit amet, eum labores consequat eu,ex vis vide copiosae electram.Ut est congue ignota instructior, ex assum hendrerit usu. Ad pri case causae officiis, quas habeo ludus eum et. Facer virtute senserit ne sea, ex posse melius equidem eum."
           },
@@ -35,13 +38,14 @@
               "Id": "5",
               //"img": "http://likefotos.com/wp-content/uploads/2015/01/paisagem-tailandia1.jpg",
               "img": "./img/tmkt.jpg",
+              "flag": "./img/brazil.jpg",
               "title": "TMKT",
               "Description": "Lorem ipsum dolor sit amet, eum labores consequat eu,ex vis vide copiosae electram.Ut est congue ignota instructior, ex assum hendrerit usu. Ad pri case causae officiis, quas habeo ludus eum et. Facer virtute senserit ne sea, ex posse melius equidem eum."
           },
 
         ],
-        labels: ["Angular", ".Net", "SQL Server", "HTML5", "CSS3", "Javascript", "Mobile"],
-        data: [[80, 90, 90, 90, 85, 70, 70]],
+        labels: ["Angular", ".Net", "SQL Server", "HTML5", "CSS3", "Javascript", "web responsivity"],
+        data: [[80, 95, 95, 95, 98, 90, 80]],
         onClick: function (points, evt) {
             console.log(points, evt);
         }
