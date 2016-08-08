@@ -148,3 +148,7 @@ img {
     position:absolute;
     width:100%;
 }
+
+.large-text{
+    font-size:20px;
+}

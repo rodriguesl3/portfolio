@@ -1,5 +1,8 @@
 ﻿var WhymeController = function ($rootScope) {
     angular.extend(this, {
+        getExperience: function (experience) {
+            console.log(experience);
+        },
         experiences: [
             {
                 "Id": "0",
@@ -44,10 +47,20 @@
           },
 
         ],
-        labels: ["Angular", ".Net", "SQL Server", "HTML5", "CSS3", "Javascript", "web responsivity"],
-        data: [[80, 95, 95, 95, 98, 90, 80]],
+        labels: ["Angular", ".Net", "SQL Server", "HTML5", "CSS3", "Javascript", "web responsivity", "AureliaJS"],
+        data: [[80, 95, 95, 95, 98, 90, 80, 50]],
         onClick: function (points, evt) {
             console.log(points, evt);
+        },
+        slickConfig: {
+            autoplay: true,
+            autoplaySpeed: 3000,
+            event: {
+                beforeChange: function (event, slick, currentSlide, nextSlide) {
+                },
+                afterChange: function (event, slick, currentSlide, nextSlide) {
+                }
+            }
         }
     });
     $rootScope.bodyImage = "";
