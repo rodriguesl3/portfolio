@@ -12,7 +12,6 @@
         experiences: [
             {
                 "Id": "0",
-                //"img": "http://likefotos.com/wp-content/uploads/2015/01/paisagem-tailandia1.jpg",
                 "img": "./img/zurich.png",
                 "flag": "./img/ireland.jpg",
                 "imgStyle": "background-color:black;",
@@ -21,7 +20,6 @@
             },
             {
                 "Id": "1",
-                //"img": "http://likefotos.com/wp-content/uploads/2015/01/paisagem-tailandia1.jpg",
                 "img": "./img/ability.png",
                 "flag": "./img/ireland.jpg",
                 "imgStyle": "background-color:black;",
@@ -29,7 +27,6 @@
                 "Description": "Lorem ipsum dolor sit amet, eum labores consequat eu,ex vis vide copiosae electram.Ut est congue ignota instructior, ex assum hendrerit usu. Ad pri case causae officiis, quas habeo ludus eum et. Facer virtute senserit ne sea, ex posse melius equidem eum."
             }, {
                 "Id": "2",
-                //"img": "http://likefotos.com/wp-content/uploads/2015/01/paisagem-tailandia1.jpg",
                 "img": "./img/freelancing.jpg",
                 "flag": "./img/ireland.jpg",
                 "title": "Freelancer",
@@ -37,7 +34,6 @@
             },
           {
               "Id": "4",
-              //"img": "http://likefotos.com/wp-content/uploads/2015/01/paisagem-tailandia1.jpg",
               "img": "./img/mac.png",
               "flag": "./img/brazil.jpg",
               "title": "MAC",
@@ -45,7 +41,6 @@
           },
           {
               "Id": "5",
-              //"img": "http://likefotos.com/wp-content/uploads/2015/01/paisagem-tailandia1.jpg",
               "img": "./img/tmkt.jpg",
               "flag": "./img/brazil.jpg",
               "title": "TMKT",
