@@ -1,6 +1,11 @@
 ﻿var WhymeController = function ($rootScope) {
     angular.extend(this, {
+        showDetails: false,
+        longDescription:"",
         getExperience: function (experience) {
+            debugger;
+            this.showDetails = true;
+            this.longDescription = experience.Description
             console.log(experience);
         },
         experiences: [
@@ -53,8 +58,8 @@
             console.log(points, evt);
         },
         slickConfig: {
-            autoplay: true,
-            autoplaySpeed: 3000,
+            //autoplay: true,
+            //autoplaySpeed: 3000,
             event: {
                 beforeChange: function (event, slick, currentSlide, nextSlide) {
                 },

@@ -9,7 +9,7 @@ portfolio.controller('aboutController', aboutController);
 /*Directives*/
 //portfolio.directive('blur', blur);
 //portfolio.directive('parallax', parallax);
-
+portfolio.directive('expand', expand);
 /*Routes*/
 portfolio.config(routes);
 portfolio.config(globalConfig);

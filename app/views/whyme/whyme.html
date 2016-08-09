@@ -1,4 +1,8 @@
 <div ng-controller="WhymeController as why">
+    <div ng-class="!why.showDetails?'transition':'transition main-details'" ng-click="hideDetails()" expand ng-show="why.showDetails" ng-animate="fadeIn:fadeOut">
+        
+        {{why.longDescription}}
+    </div>
     <div parallax-background parallax-ratio="0.5"
          class="parallax-image"
          style="background-image:url(./img/programminggif.gif);">
@@ -24,39 +28,35 @@
         </div>
         <div class="col s12 m6 l6">
             <p class="large-text">
-                    As tecnologias citadas nesse gráfico ao lado, são tecnologias que possuo experiência profissional, ou seja,
+                As tecnologias citadas nesse gráfico ao lado, são tecnologias que possuo experiência profissional, ou seja,
                 tenho trabalhado profissionalmente em projetos de pequenos, médio e grande porte.
                 Com foco em tecnologias back-end, porém tenho grande conhecimento em tecnologias front-end,
                 possuindo experiência como desenvolvedor full-stack, desenvolvendo APIs e sistemas com javascript frameworks.
-                    Seguindo as boas práticas de desenvolvimento, com SOLID, TDD, Bound Context, e línguagem obíqua, dessa forma
+                Seguindo as boas práticas de desenvolvimento, com SOLID, TDD, Bound Context, e línguagem obíqua, dessa forma
                 facilitando a escalabilidade dos projetos.
             </p>
+
         </div>
     </div>
 
     <!--<div parallax-background parallax-ratio="0.5"
          class="parallax-image"
          style="background-image:url(./img/luz2.jpg);"></div>-->
-    <div parallax-background="" parallax-vertical-offset="100" style="background-color:white">
+    <div style="background-color:white">
         <div class="row">
             <div class="col s12 m12 l12">
-                <slick infinite=true slides-to-show=3 slides-to-scroll=3 autoplay="true">
+                <slick infinite=true slides-to-show=3 slides-to-scroll=3">
                     <div class="col s4 m4 l4" ng-repeat="experience in why.experiences track by $index">
-                        <div class="row">
-                            <div class="col s12">
-                                <div class="card">
-                                    <div class="card-image" style="background-color:blue;">
-                                        <img src="{{::experience.flag}}" alt="" style="max-height:200px;" />
-                                        <!--<img class="blur" style="{{::experience.imgStyle}}" src="{{::experience.img}}" alt="" />
-                                        <span class="card-title">{{::experience.title}}</span>-->
-      </div>
-                                    </div>
-                                    <div class="card-content" ng-click="why.getExperience(experience)">
-                                        <h3>{{::experience.title}}</h3>
-                                        <p style="color:black; padding-top:50px">
-                                            {{::experience.Description}}
-                                        </p>
-                                    </div>
+                        <div class="col s12">
+                            <div class="card" ng-click="why.getExperience(experience)">
+                                <div class="card-image" style="background-color:blue;">
+                                    <img src="{{::experience.flag}}" alt="" style="max-height:200px;" />
+                                </div>
+                                <div class="card-content">
+                                    <h3>{{::experience.title}}</h3>
+                                    <p style="color:black; padding-top:50px">
+                                        {{::experience.Description}}
+                                    </p>
                                 </div>
                             </div>
                         </div>
