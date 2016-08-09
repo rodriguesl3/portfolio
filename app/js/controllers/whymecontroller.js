@@ -5,9 +5,10 @@
         getExperience: function (experience) {
             debugger;
             this.showDetails = true;
-            this.longDescription = experience.Description
+            this.experience = experience;
             console.log(experience);
         },
+        experience:{},
         experiences: [
             {
                 "Id": "0",

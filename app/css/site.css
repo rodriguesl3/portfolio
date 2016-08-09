@@ -162,7 +162,7 @@ img {
 }
 
 .main-details {
-    position: absolute;
+    position: fixed;
     
     left: 0;
     width: 100%;
