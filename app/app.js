@@ -1,4 +1,4 @@
-var portfolio = angular.module('portfolio', ['ui.router', 'ngAnimate', 'ngRoute', 'slickCarousel', 'chart.js', 'angular-parallax']);
+var portfolio = angular.module('portfolio', ['ui.router', 'ngAnimate', 'ngRoute', 'slickCarousel', 'chart.js', 'angular-parallax', 'ngSanitize']);
 
 /*Controller*/
 portfolio.controller('MainController', MainController);
