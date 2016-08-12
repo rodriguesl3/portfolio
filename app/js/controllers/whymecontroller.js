@@ -17,7 +17,6 @@
                 "imgStyle": "background-color:black;",
                 "title": "Zurich",
                 "Location": "Dublin, Ireland",
-                "ShortDescription": "Migraçao de Sistema, Seguro Viagem",
                 "Description": "Empresa multinacional de seguros, localizada próximo ao centro de Dublin, onde foi necessário ficar alocado para reuniões com gestores equipes de teste e publicação de sistemas. Participando de reuniões de Scrum com as equipes relacionadas nos projetos",
                 "Technologies": "ASP Clássico, ASP.Net WebForms, Asp.Net MVC, SQL Server, ADO.Net, WebServices",
                 "SampleProjects": [
@@ -26,13 +25,29 @@
                 ]
             },
             {
+                "Id": "0",
+                "img": "./img/rapp.png",
+                "flag": "./img/england.jpg",
+                "imgStyle": "background-color:black;",
+                "title": "Rapp Worldwide",
+                "Location": "London, Inglaterra",
+                "Description": "Empresa multinacional de grande porte no ramo de marketing e relacionamento com cliente, com mais de 30 escritórios espalhados pelo mundo",
+                "Technologies": "ASP Clássico, ASP.Net WebForms, Asp.Net MVC, SQL Server, ADO.Net, WebServices",
+                "SampleProjects": [
+                    { "title": "Mercedes-Benz", "Description": "Desenvolvimento de relatórios para acompanhamento de vendas do grupo Daimler no reino unido, com o Pentaho CDE Report integrado com Google Maps." },
+                    { "title": "Takeda", "Description": "Sistema acompanha algumas variáveis de bem estar do usuário, como nível de stress, preocupação entre outras e gerenciar " }
+                ]
+            },
+
+
+
+            {
                 "Id": "1",
                 "img": "./img/ability.png",
                 "flag": "./img/ireland.jpg",
                 "imgStyle": "background-color:black;",
                 "title": "Ability",
-                "ShortDescription": "Empresa Irlandesa desenvolvedora de sistemas de médio porte com faturamento médio 700.000 euros por ano.",
-                "Description": "Como desenvolvedor web em Ability Software, eu sou responsável por criar a arquitetura inicial e desenvolvimento de diferentes tipos de sistemas utilizando várias tecnologias. Todos os projetos são compostos por um gerente de Projeto, um líder técnico e quatro desenvolvedores, seguindo reunião de Scrum todas as manhãs.",
+                "Description": "Empresa Irlandesa desenvolvedora de sistemas de médio porte com faturamento médio de 700.000 euros por ano, com clientes na Irlanda e Reino Unido.",
                 "Technologies": "Asp.Net MVC, AngularJS, EmberJS, Xamarin Android, Arquitetura Cebola, TDD, Padrão de Projeto MVC e MVVM",
                 "SampleProjects": [
                     { "title": "OmniHub", "Description": "Sistema responsável por controlar apólices e documentos. Procurando seguir os princípios SOLID com AngularJS e WebAPI. " },
