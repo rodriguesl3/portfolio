@@ -25,7 +25,7 @@
                 ]
             },
             {
-                "Id": "0",
+                "Id": "6",
                 "img": "./img/rapp.png",
                 "flag": "./img/england.jpg",
                 "imgStyle": "background-color:black;",
@@ -35,18 +35,15 @@
                 "Technologies": "ASP Clássico, ASP.Net WebForms, Asp.Net MVC, SQL Server, ADO.Net, WebServices",
                 "SampleProjects": [
                     { "title": "Mercedes-Benz", "Description": "Desenvolvimento de relatórios para acompanhamento de vendas do grupo Daimler no reino unido, com o Pentaho CDE Report integrado com Google Maps." },
-                    { "title": "Takeda", "Description": "Sistema acompanha algumas variáveis de bem estar do usuário, como nível de stress, preocupação entre outras e gerenciar " }
+                    { "title": "Takeda", "Description": "Sistema acompanha algumas variáveis de bem estar do usuário, como nível de stress, preocupação entre outras e gerenciar consultas médicas. Utilizando EmberJS e Service Stack, reuniões de Scrum." }
                 ]
             },
-
-
-
             {
                 "Id": "1",
                 "img": "./img/ability.png",
                 "flag": "./img/ireland.jpg",
                 "imgStyle": "background-color:black;",
-                "title": "Ability",
+                "title": "Ability Software",
                 "Description": "Empresa Irlandesa desenvolvedora de sistemas de médio porte com faturamento médio de 700.000 euros por ano, com clientes na Irlanda e Reino Unido.",
                 "Technologies": "Asp.Net MVC, AngularJS, EmberJS, Xamarin Android, Arquitetura Cebola, TDD, Padrão de Projeto MVC e MVVM",
                 "SampleProjects": [
@@ -77,7 +74,7 @@
                   { "title": "Publisher App", "Description": "Sistema para controlar publicação de aplicações em ambiente de Qualidade e de produção. Desenvolvido em  ASP.Net MVC 5, Web API, WCF, JQuery e Bootstrap." },
                   { "title": "Portal Web", "Description": "Portal WEB responsável por automatizar os departamentos administrativos, integrando tecnologias como ASP.Net WebForms e ASP.Net MVC 5." },
                   { "title": " Integrador WEB ", "Description": "Desenvolvimento de sistemas integrador com SAP (RFC e SAP .Net Communicator Library) comunicando com alguns módulos MM, PM, FI, HR." },
-                  ]
+              ]
           },
           {
               "Id": "5",
@@ -93,8 +90,8 @@
           },
 
         ],
-        labels: ["Angular", ".Net", "SQL Server", "HTML5", "CSS3", "Javascript", "web responsivity", "AureliaJS"],
-        data: [[80, 95, 95, 95, 98, 90, 80, 50]],
+        labels: ["NodeJS", "MongoDB", "Angular", ".Net", "SQL Server", "HTML5", "CSS3", "Javascript", "web responsivity"],
+        data: [[80, 70, 93, 95, 95, 95, 98, 97, 90]],
         onClick: function (points, evt) {
             console.log(points, evt);
         },

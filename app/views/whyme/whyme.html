@@ -1,15 +1,15 @@
 <div ng-controller="WhymeController as why">
-    <div ng-class="!why.showDetails?'transition':'transition main-details'" ng-click="hideDetails()" expand ng-show="why.showDetails" ng-animate="fadeIn:fadeOut" style="overflow:auto;">
-        <div class="container" style="padding:10px;">
+    <div ng-class="!why.showDetails?'transition':'transition main-details'" ng-click="hideDetails()" expand ng-show="why.showDetails" ng-animate="fadeIn:fadeOut" style="overflow:auto; background-color:rgba(0,0,0,0.9)">
+        <div  class="container" style="padding:10px; color:white;">
             <h3>
                 {{why.experience.title}}
             </h3>
             <h4>
                 {{why.experience.Description}}
             </h4>
-            <div ng-repeat="project in why.experience.SampleProjects track by $index">
+            <div  ng-repeat="project in why.experience.SampleProjects track by $index">
                 <h4>{{project.title}}</h4>
-                <h5 ng-bind-html="project.Description"></h5>
+                <h5  ng-bind-html="project.Description"></h5>
             </div>
         </div>
        
@@ -27,9 +27,9 @@
     </div>
     <div class="row center">
         <h4 class="col s10  offset-s1">
-            O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão.
-            O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500,
-            quando uma misturou os caracteres de um texto para criar um espécime de livro
+            Como desenvolvedor de sistemas possuo experiência e conhecimento em desenvolvimento
+            na plataforma Microsoft (.Net e SQL Server) e frameworks Javascript (Angular e EmberJS)
+            conhecimento em testes unitários e de integração
         </h4>
     </div>
     <div class="row" style="background-color:white">
@@ -57,7 +57,7 @@
     <div style="background-color:white">
         <div class="row">
             <div class="col s12 m12 l12">
-                <slick infinite=true slides-to-show=3 slides-to-scroll=3">
+                <slick infinite=true slides-to-show=3 slides-to-scroll=3 auto-play=true>
                     <div class="col s4 m4 l4" ng-repeat="experience in why.experiences track by $index">
                         <div class="col s12">
                             <div class="card" ng-click="why.getExperience(experience)">
@@ -66,8 +66,8 @@
                                 </div>
                                 <div class="card-content">
                                     <h3>{{::experience.title}}</h3>
-                                    <p style="color:black; padding-top:50px">
-                                        {{::experience.ShortDescription}}
+                                    <p style="color:black; padding-top:20px">
+                                        {{::experience.Description}}
                                     </p>
                                 </div>
                             </div>
