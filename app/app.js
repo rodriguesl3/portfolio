@@ -7,6 +7,7 @@ portfolio.controller('aboutController', aboutController);
 
 /*Directives*/
 portfolio.directive('expand', expand);
+portfolio.directive('navbar', navbar);
 
 /*Routes*/
 portfolio.config(routes);
