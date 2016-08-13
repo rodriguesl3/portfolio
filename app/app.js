@@ -3,13 +3,11 @@ var portfolio = angular.module('portfolio', ['ui.router', 'ngAnimate', 'ngRoute'
 /*Controller*/
 portfolio.controller('MainController', MainController);
 portfolio.controller('WhymeController', WhymeController);
-//portfolio.controller('blogController', blogController);
 portfolio.controller('aboutController', aboutController);
 
 /*Directives*/
-//portfolio.directive('blur', blur);
-//portfolio.directive('parallax', parallax);
 portfolio.directive('expand', expand);
+
 /*Routes*/
 portfolio.config(routes);
 portfolio.config(globalConfig);

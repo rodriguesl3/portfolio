@@ -31,6 +31,7 @@ module.exports = function (grunt) {
                     'bower_components/d3/d3.min.js',
                     'bower_components/c3/c3.min.js',
                     'bower_components/angular-chart.js/dist/angular-chart.min.js',
+                    'bower_components/angular-sanitize/angular-sanitize.min.js',
                     'bower_components/angular-parallax/scripts/angular-parallax.js',
                     'bower_components/Materialize/dist/js/materialize.min.js'
                 ],
@@ -87,7 +88,7 @@ module.exports = function (grunt) {
                     removeComments: true,
                     collapseWhitespace: true
                 },
-                src: ['app/index.html'],
+                src: ['app/index-prod.html'],
                 dest: 'app/dist/index.html'
             }
         },

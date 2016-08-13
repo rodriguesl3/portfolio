@@ -3,7 +3,6 @@
         showDetails: false,
         longDescription: "",
         getExperience: function (experience) {
-            debugger;
             this.showDetails = true;
             this.experience = experience;
             console.log(experience);

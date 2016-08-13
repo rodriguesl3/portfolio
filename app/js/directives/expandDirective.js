@@ -5,8 +5,8 @@
         link: function (scope, element) {
             scope.hideDetails = function () {
                 $(element).removeClass('main-details');
-                scope.why.showDetails = false
-            }
+                scope.why.showDetails = false;
+            };
         }
-    }
-}
+    };
+};

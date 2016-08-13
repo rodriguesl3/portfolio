@@ -1,6 +1,7 @@
-﻿var globalConfig = function (slickCarouselConfig) {
+﻿var globalConfig = function (slickCarouselConfig, $compileProvider) {
+    $compileProvider.debugInfoEnabled(false);
     slickCarouselConfig.dots = true;
     slickCarouselConfig.autoplay = false;
 };
 
-globalConfig.$inject = ['slickCarouselConfig']; 
+globalConfig.$inject = ['slickCarouselConfig', '$compileProvider'];
