@@ -180,3 +180,20 @@ img {
     background-color: transparent;
     -webkit-border-radius: 6px;
 }
+
+ .navbar{
+        background-color:rgba(0,0,0,.7); 
+        position:fixed;
+        z-index: 999;
+        height: 10%;
+        text-align: left;
+    }
+
+    .navbar h3{
+        margin-top: 10px;
+        margin-left: 3%;
+    }
+
+    .link-references{
+            margin-top: 15%;
+    }

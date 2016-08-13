@@ -1,4 +1,4 @@
-var navbar = function(){
+var navbar = function($state){
     return {
         restrict:'E',
         replace:true,
@@ -11,6 +11,15 @@ var navbar = function(){
                 else
                     $(element).fadeOut();
             });
+
+            $scope.mainState = function(){
+               $(element).fadeOut(function(){
+                $state.go('main');
+               })
+                
+            }
         }
     }
 }
+
+navbar.$inject = ['$state'];
