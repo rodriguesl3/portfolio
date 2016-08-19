@@ -51,10 +51,10 @@ module.exports = function (grunt) {
         cssmin: {
             libs: {
                 src: [
+                    'bower_components/Materialize/dist/css/materialize.min.css',
                     'bower_components/angular-chart.js/dist/angular-chart.min.css',
                     'bower_components/animate.css/animate.min.css',
                     'bower_components/font-awesome/css/font-awesome.min.css',
-                    'bower_components/Materialize/dist/css/materialize.min.css',
                     'bower_components/slick-carousel/slick/slick.css',
                     'bower_components/slick-carousel/slick/slick-theme.css',
                 ],
@@ -113,9 +113,9 @@ module.exports = function (grunt) {
                 cwd: 'app/font/',
                 src: '**',
                 dest: 'app/dist/font/'
-            }
+            },
+           
         }
-
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');

@@ -5,8 +5,8 @@ var navbar = function($state){
         templateUrl: 'views/templates/navbar.html',
         link:function($scope, element, attrs, ctrls){
              $(window).on('scroll', function(){
-                 console.log($(this).scrollTop());
-                if($(this).scrollTop() > 100)
+                  console.log();
+                if($(this).scrollTop() > 100 && $state.current.name != "main")
                     $(element).fadeIn();
                 else
                     $(element).fadeOut();
@@ -15,11 +15,10 @@ var navbar = function($state){
             $scope.mainState = function(){
                $(element).fadeOut(function(){
                 $state.go('main');
-               })
+               });
                 
-            }
+            };
         }
-    }
-}
-
+    };
+};
 navbar.$inject = ['$state'];
