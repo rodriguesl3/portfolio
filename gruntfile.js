@@ -3,10 +3,10 @@ module.exports = function (grunt) {
     grunt.initConfig({
         clean: {
             temp: [
-                'app/dist/js',
-                'app/dist/css',
+                'app/publish/js',
+                'app/publish/css',
             ],
-            all: ['app/dist']
+            all: ['app/publish']
         },
         jshint: {
             dist: {
@@ -16,7 +16,7 @@ module.exports = function (grunt) {
         concat: {
             scripts: {
                 src: ['app/js/**/*.js', 'app/*.js'],
-                dest: 'app/dist/js/scripts.js'
+                dest: 'app/publish/js/scripts.js'
             },
             libs: {
                 src: [
@@ -35,17 +35,17 @@ module.exports = function (grunt) {
                     'bower_components/angular-parallax/scripts/angular-parallax.js',
                     'bower_components/Materialize/dist/js/materialize.min.js'
                 ],
-                dest: 'app/dist/js/lib.min.js'
+                dest: 'app/publish/js/lib.min.js'
             },
             all: {
-                src: ['app/dist/js/lib.min.js', 'app/dist/js/scripts.min.js'],
-                dest: 'app/dist/vendor.min.js'
+                src: ['app/publish/js/lib.min.js', 'app/publish/js/scripts.min.js'],
+                dest: 'app/publish/vendor.min.js'
             }
         },
         uglify: {
             scripts: {
-                src: ['app/dist/js/scripts.js'],
-                dest: 'app/dist/js/scripts.min.js'
+                src: ['app/publish/js/scripts.js'],
+                dest: 'app/publish/js/scripts.min.js'
             }
         },
         cssmin: {
@@ -58,18 +58,18 @@ module.exports = function (grunt) {
                     'bower_components/slick-carousel/slick/slick.css',
                     'bower_components/slick-carousel/slick/slick-theme.css',
                 ],
-                dest: 'app/dist/css/csslib.min.css'
+                dest: 'app/publish/css/csslib.min.css'
             },
             local: {
                 src: [
                     'app/css/site.css',
                     'app/css/file.css'
                 ],
-                dest: 'app/dist/css/csslocal.min.css'
+                dest: 'app/publish/css/csslocal.min.css'
             },
             all: {
-                src: ['app/dist/css/csslib.min.css', 'app/dist/css/csslocal.min.css'],
-                dest: 'app/dist/vendor.min.css'
+                src: ['app/publish/css/csslib.min.css', 'app/publish/css/csslocal.min.css'],
+                dest: 'app/publish/vendor.min.css'
             }
         },
         htmlmin: {
@@ -81,41 +81,76 @@ module.exports = function (grunt) {
                 expand: true,
                 cwd: 'app/views/',
                 src: ['**/*.html'],
-                dest: 'app/dist/views',
+                dest: 'app/publish/views',
             },
             index: {
                 options: {
-                    removeComments: true,
-                    collapseWhitespace: true
+                    removeComments: false,
+                    collapseWhitespace: false
                 },
                 src: ['app/index-prod.html'],
-                dest: 'app/dist/index.html'
+                dest: 'app/publish/index.html'
             }
         },
         copy: {
+            materialize :{
+                expand: true,
+                cwd:'bower_components/Materialize/publish/css/',
+                src: 'materialize.min.css',
+                dest: 'app/publish/'
+            },
             images: {
                 expand: true,
                 filter: 'isFile',
                 cwd:'app/img/',
                 src: '**',
-                dest: 'app/dist/img/'
+                dest: 'app/publish/img/'
             },
             fonts: {
                 expand: true,
                 filter: 'isFile',
                 cwd: 'app/fonts/',
                 src: '**',
-                dest: 'app/dist/fonts/'
+                dest: 'app/publish/fonts/'
             },
             font: {
                 expand: true,
                 filter: 'isFile',
                 cwd: 'app/font/',
                 src: '**',
-                dest: 'app/dist/font/'
+                dest: 'app/publish/font/'
             },
            
+        },
+        watch: {
+            project: {
+               files: ['**/*.html',
+                       'app/css/site.css',
+                       'app/css/file.css',
+                       'app/js/**/*.js', 
+                       'app/*.js'],
+                tasks: [
+                    'clean:all',
+                    'jshint',
+                    'concat:scripts',
+                    'concat:libs',
+                    'uglify',
+                    'concat:all',
+                    'cssmin:libs',
+                    'cssmin:local',
+                    'cssmin:all',
+                    'htmlmin:views',
+                    'htmlmin:index',
+                    'copy:materialize',
+                    'copy:images',
+                    'copy:fonts',
+                    'copy:font',
+                    'clean:temp'
+                    ]
+            }
         }
+
+
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -125,6 +160,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('prod',
         [
@@ -139,6 +175,7 @@ module.exports = function (grunt) {
         'cssmin:all',
         'htmlmin:views',
         'htmlmin:index',
+        'copy:materialize',
         'copy:images',
         'copy:fonts',
         'copy:font',
