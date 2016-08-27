@@ -162,7 +162,6 @@ img {
 
 .main-details {
     position: fixed;
-    
     left: 0;
     width: 100%;
     z-index: 99999;
@@ -170,15 +169,7 @@ img {
     height: 100vh;
 }
 
-::-webkit-scrollbar
-{
-    width: 0px;
-}
-::-webkit-scrollbar-track-piece
-{
-    background-color: transparent;
-    -webkit-border-radius: 6px;
-}
+
 
  .navbar{
         background-color:rgba(0,0,0,.7); 
@@ -196,3 +187,33 @@ img {
     .link-references{
             margin-top: 15%;
     }
+
+
+ .ng-enter {
+            position: absolute;
+            width: 100%;
+            animation: fadeIn 1.5s;
+            z-index: 555;
+        }
+
+        .ng-leave {
+            position: absolute;
+            width: 100%;
+            animation: fadeOut 1.5s;
+            z-index: 999;
+        }
+
+
+.main-details .ng-enter {
+            position: absolute;
+            width: 100%;
+            animation: fadeIn 0s;
+            z-index: 555;
+        }
+
+    .main-details.ng-leave {
+            position: absolute;
+            width: 100%;
+            animation: fadeOut 0s;
+            z-index: 999;
+        }

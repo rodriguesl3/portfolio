@@ -5,7 +5,6 @@
         getExperience: function (experience) {
             this.showDetails = true;
             this.experience = experience;
-            console.log(experience);
         },
         experience: {},
         experiences: [
