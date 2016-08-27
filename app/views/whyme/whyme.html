@@ -1,6 +1,8 @@
 ﻿<div ng-controller="WhymeController as why">
-    <div ng-class="!why.showDetails?'transition details-off':'transition main-details'" ng-click="hideDetails()" expand>
-        <div  class="container" style="padding:10px; color:white;">
+    <div id="details" ng-class="!why.showDetails?'details-off':' main-details'" 
+    ng-click="hideDetails()" expand>
+
+        <div class="container" style="padding:10px; color:white;">
             <i class="fa fa-times right" aria-hidden="true"></i>
             <h3>
                 {{why.experience.title}}
