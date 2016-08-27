@@ -94,16 +94,23 @@
         onClick: function (points, evt) {
             console.log(points, evt);
         },
+        //https://github.com/devmark/angular-slick-carousel
         slickConfig: {
-            //autoplay: true,
-            //autoplaySpeed: 3000,
+            enabled: true,
+            autoplay: true,
+            draggable: false,  
+            autoplaySpeed: 3000,
+            slidesToShow:(parseInt($('body').css('width').replace(/px/g,''))<=600?2:3),
+            mobileFirst:true,
+            infinite:true,
+            // method:{},
             event: {
                 beforeChange: function (event, slick, currentSlide, nextSlide) {
                 },
                 afterChange: function (event, slick, currentSlide, nextSlide) {
                 }
             }
-        }
+        },
     });
     $rootScope.bodyImage = "";
 };
