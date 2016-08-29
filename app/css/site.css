@@ -213,12 +213,12 @@ img {
     width: 100%;
     z-index: 99999;
     height: 100vh;
-    animation: expandable 1.5s;
+    animation: expandable 0.5s;
 }
 
 .details-off{
-     width: 1px;
-    animation: removing 1.5s;   
+     width: 0px;
+    animation: removing 0.5s;   
 }
 
 /* Chrome, Safari, Opera */
